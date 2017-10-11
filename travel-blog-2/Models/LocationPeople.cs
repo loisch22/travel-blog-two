@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+
+namespace TravelBlogTwo.Models
+{
+    [Table("LocationPeople")]
+    public class LocationPeople
+    {
+        [Key]
+        public int LocationPeopleId { get; set; }
+        public int LocationId { get; set; }
+        public int PeopleId { get; set; }
+    }
+        
+}
