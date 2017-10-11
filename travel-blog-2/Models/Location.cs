@@ -14,7 +14,7 @@ namespace TravelBlogTwo.Models
   {
         public Location()
         {
-            this.Experiences = new HashSet<Experience>();'
+            this.Experiences = new HashSet<Experience>();
         }
 
         [Key]
