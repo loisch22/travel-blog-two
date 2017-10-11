@@ -1,0 +1,23 @@
+﻿@model TravelBlogTwo.Models.Experience
+
+@{
+    ViewData["Title"] = "Experience - Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create a new entry</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Title)
+    @Html.EditorFor(model => model.Title)
+
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+
+    @Html.DropDownList("LocationId")
+
+    <input type="submit" value="Create" class="btn btn-default"/>
+}
+
+<p>@Html.ActionLink("Back to experiences", "Index")</p>

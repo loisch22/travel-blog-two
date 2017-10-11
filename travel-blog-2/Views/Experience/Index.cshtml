@@ -8,3 +8,24 @@
 
 <h1>Experiences</h1>
 
+<table class="table">
+    <tr>
+		<th>
+            @Html.DisplayNameFor(model => model.Title)
+		</th>
+		<th>
+			@Html.DisplayNameFor(model => model.Description)
+		</th>
+	</tr>
+	
+	@foreach(var listExperience in Model)
+	{
+     <tr>
+		<td>@Html.DisplayFor(model => listExperience.Title)</td>
+		<td>@Html.DisplayFor(model => listExperience.Description)</td>
+	 </tr> 
+	
+	}
+</table>
+
+<p>@Html.ActionLink("Create new entry", "Create")</p>

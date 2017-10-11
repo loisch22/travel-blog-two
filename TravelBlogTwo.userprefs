@@ -1,20 +1,11 @@
 ﻿<Properties StartupConfiguration="{FE17647A-0955-423A-A690-78EE8EFCAA75}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="travel-blog-2 Status">
     <Files>
-      <File FileName="travel-blog-2/Views/Experience/Index.cshtml" Line="11" Column="1" NotebookId="1" />
-      <File FileName="travel-blog-2/Views/Location/Index.cshtml" Line="1" Column="50" NotebookId="1" />
-      <File FileName="travel-blog-2/Models/Location.cs" Line="19" Column="1" NotebookId="1" />
-      <File FileName="travel-blog-2/Controllers/LocationController.cs" Line="18" Column="1" NotebookId="1" />
-      <File FileName="travel-blog-2/Views/Shared/_Layout.cshtml" Line="36" Column="64" NotebookId="1" />
-      <File FileName="travel-blog-2 Status" NotebookId="1" />
+      <File FileName="travel-blog-2/Views/Experience/Index.cshtml" Line="31" Column="54" />
+      <File FileName="travel-blog-2/Views/Experience/Create.cshtml" Line="23" Column="56" />
+      <File FileName="travel-blog-2/Controllers/ExperienceController.cs" Line="28" Column="19" />
+      <File FileName="travel-blog-2 Status" />
     </Files>
-    <FloatingWindows>
-      <FloatingWindow WindowId="1" X="1627" Y="202" Width="882" Height="863">
-        <Files>
-          <File FileName="travel-blog-2/Controllers/ExperienceController.cs" Line="23" Column="1" />
-        </Files>
-      </FloatingWindow>
-    </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

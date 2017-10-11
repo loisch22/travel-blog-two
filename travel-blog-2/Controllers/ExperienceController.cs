@@ -18,5 +18,19 @@ namespace TravelBlogTwo.Controllers
         {
             return View(db.Experiences.Include(experiences => experiences.Location).ToList());
         }
+
+        public IActionResult Create()
+        {
+            ViewBag.LocationId = new SelectList(db.Locations, "LocationId", "LocationCity", "LocationCountry");
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Experience experience)
+        {
+            db.Experiences.Add(experience);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
