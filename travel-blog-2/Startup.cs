@@ -6,13 +6,14 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using TravelBlogTwo.Models;
-
+using Microsoft.Extensions.Logging;
 
 namespace TravelBlogTwo
 {
 	public class Startup
 	{
 		public IConfigurationRoot Configuration { get; set; }
+
 		public Startup(IHostingEnvironment env)
 		{
 			var builder = new ConfigurationBuilder()
@@ -20,23 +21,39 @@ namespace TravelBlogTwo
 				.AddJsonFile("appsettings.json");
 			Configuration = builder.Build();
 		}
+
 		public void ConfigureServices(IServiceCollection services)
 		{
+			services.AddMvc();
 			services.AddEntityFramework()
-				.AddDbContext<TravelBlogDbContext>(options =>
-					options.UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
+					.AddDbContext<TravelBlogDbContext>(options =>
+							   options
+								 .UseMySql(
+									 Configuration["ConnectionStrings:DefaultConnection"]));
 		}
 
-
-		public void Configure(IApplicationBuilder app)
+		public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
 		{
+			if (env.IsDevelopment())
+			{
+				app.UseDeveloperExceptionPage();
+			}
 
+			app.UseMvc(routes =>
+			{
+				routes.MapRoute(
+					name: "default",
+					template: "{controller=Home}/{action=Index}/{id?}");
+			});
+
+			loggerFactory.AddConsole();
+
+			app.UseStaticFiles();
 
 			app.Run(async (context) =>
 			{
-				await context.Response.WriteAsync("Hello World!");
+				await context.Response.WriteAsync("This page is under construction");
 			});
 		}
 	}
 }
-
