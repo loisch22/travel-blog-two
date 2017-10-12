@@ -1,11 +1,10 @@
 ﻿<Properties StartupConfiguration="{FE17647A-0955-423A-A690-78EE8EFCAA75}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="travel-blog-two Status">
     <Files>
-      <File FileName="travel-blog-2/Views/Experience/Edit.cshtml" Line="8" Column="54" />
+      <File FileName="travel-blog-2/Views/Location/Index.cshtml" Line="31" Column="70" />
+      <File FileName="travel-blog-2/Controllers/LocationController.cs" Line="23" Column="36" />
       <File FileName="travel-blog-2/Controllers/ExperienceController.cs" Line="55" Column="10" />
-      <File FileName="travel-blog-2/Views/Experience/Delete.cshtml" Line="17" Column="45" />
-      <File FileName="travel-blog-2/Views/Experience/Index.cshtml" Line="22" Column="7" />
-      <File FileName="travel-blog-2/Views/Experience/Read.cshtml" Line="12" Column="45" />
+      <File FileName="travel-blog-2/Views/Experience/Index.cshtml" Line="38" Column="3" />
       <File FileName="travel-blog-two Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>
