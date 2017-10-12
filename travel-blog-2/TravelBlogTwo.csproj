@@ -31,4 +31,7 @@
     <Compile Remove="Models\ExperienceLocation.cs" />
     <Compile Remove="Models\LocationPeople.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="TravelBlogTwo.sql.zip" />
+  </ItemGroup>
 </Project>

@@ -14,26 +14,25 @@
             @Html.DisplayNameFor(model => model.Title)
 		</th>
 		<th>
-			@Html.DisplayNameFor(model => model.Description)
-		</th>
-		<th>
 			@Html.DisplayNameFor(model => model.Location.LocationCity)
 		</th>
 		<th>
 			@Html.DisplayNameFor(model => model.Location.LocationCountry)
 		</th>
+		<th></th>
 	</tr>
 	
 	@foreach(var listExperience in Model)
 	{
      <tr>
 		<td>@Html.DisplayFor(model => listExperience.Title)</td>
-		<td>@Html.DisplayFor(model => listExperience.Description)</td>
 		<td>@Html.DisplayFor(model => listExperience.Location.LocationCity)
         <td>@Html.DisplayFor(model => listExperience.Location.LocationCountry)
 
 		<td>
-          @Html.ActionLink("Edit", "Edit", new { id = listExperience.ExperienceId })
+          @Html.ActionLink("Read", "Read", new { id = listExperience.ExperienceId}) |
+          @Html.ActionLink("Edit", "Edit", new { id = listExperience.ExperienceId }) |
+		  @Html.ActionLink("Delete", "Delete", new { id = listExperience.ExperienceId})
         </td>
 	 </tr> 
 	}

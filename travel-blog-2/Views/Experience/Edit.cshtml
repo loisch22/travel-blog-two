@@ -5,4 +5,19 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit @Html.DisplayFor(model => model.Title)</h2>
+<h2>Edit @Html.DisplayFor(model => model.Title) Entry</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.ExperienceId)
+
+    @Html.LabelFor(model => model.Title)
+    @Html.EditorFor(model => model.Title)
+
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+
+    @Html.DropDownList("LocationId")
+
+    <input type="submit" value="Save"/>
+}
